@@ -252,11 +252,11 @@ namespace DiscordBot
                 .WithPlaceholder("Select a info type")
                 .WithMaxValues(1)
                 .WithMinValues(1)
-                .AddOption("Stats", "Stats")
-                .AddOption("Talents (будет позже)", "Talents")
+                .AddOption("Статы", "Stats")
+                .AddOption("Таланты", "Talents")
                 .AddOption("Legendary (будет позже)", "Legendary")
-                .AddOption("PvP Talents (будет позже)", "PvP Talents")
-                .AddOption("Covenants (будет позже)", "Covenants");
+                .AddOption("ПвП Таланты", "PvP Talents")
+                .AddOption("Ковенанты", "Covenants");
             return menu;
 
         }
@@ -358,7 +358,7 @@ namespace DiscordBot
                         string taskString = await statsHandler.GetStatsPopularity(classTypeEdited, specTypeEdited, contentTypeEdited, infoType);
                         await arg.UpdateAsync(async x =>
                         {
-                            x.Content = containerBorder + contentType + " " + classType + " " + specType + " " + "_" + arg.Data.Values.First() + " " + containerBorder + "\n" + "```json\n" + '"' + taskString + '"' + "\n" + "```";
+                            x.Content = containerBorder + contentType + " " + classType + " " + specType + " " + "_" + arg.Data.Values.First() + " " + containerBorder + "\n" + "```json\n" + '"'+ "\n" + taskString + '"' + "\n" + "```";
                         });
                         break;
                     }
