@@ -1,9 +1,7 @@
 ﻿using Discord;
 using Discord.WebSocket;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DiscordBot
@@ -29,10 +27,10 @@ namespace DiscordBot
 
         public async Task MyButtonsHandler(SocketMessageComponent component)
         {
-            // We can now check for our custom id
+            
             switch (component.Data.CustomId)
             {
-                // Since we set our buttons custom id as 'custom-id', we can check for it like this:
+                
                 case "mm+":
                     {
                         var builder = new ComponentBuilder();

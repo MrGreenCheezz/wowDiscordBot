@@ -1,6 +1,5 @@
 ﻿using System;
 using Discord;
-using System.Windows.Forms;
 using Discord.Commands;
 using System.Threading.Tasks;
 using Discord.WebSocket;
@@ -30,7 +29,7 @@ namespace DiscordBot
             _commands.Log += Log;
             _client.Log += Log;
           
-            var token = "OTY5NjA2NTcyNTE2OTk1MTM1.Ymv2fQ.ojW3O4VgkH6DPPjdgArwrEUZ1zU";
+            var token = "OTY5NjA2NTcyNTE2OTk1MTM1.Ymv2fQ.Em-MbKSMBftxbrlMsuBDca4Nx60";
 
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
