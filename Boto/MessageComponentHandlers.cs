@@ -8,7 +8,7 @@ namespace DiscordBot
 {
     public class MessageComponentHandler
     {
-        char containerBorder = '^';
+        private char containerBorder = '^';
         private readonly DiscordSocketClient _client;
         Regex regexForContainer = new Regex(@"\^.+\^");
         Regex regexForData = new Regex(@"_{1}\S+");
@@ -252,11 +252,9 @@ namespace DiscordBot
                 .WithMinValues(1)
                 .AddOption("Статы", "Stats")
                 .AddOption("Таланты", "Talents")
-                .AddOption("Legendary (будет позже)", "Legendary")
                 .AddOption("ПвП Таланты", "PvP Talents")
                 .AddOption("Ковенанты", "Covenants");
             return menu;
-
         }
         public async Task MyMenuHandler(SocketMessageComponent arg)
         {
